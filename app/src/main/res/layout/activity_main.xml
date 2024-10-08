@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/temp_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/cool_inactive"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/cool_inactive" />
+
+        <ImageView
+            android:id="@+id/heat_inactive"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heat_inactive" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/car_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/mainCar"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="220mi"
+            android:textSize="30sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="62%"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/inactive_grey" />
+
+    </LinearLayout>
+
+
+
+
+    <ImageView
+        android:id="@+id/lock1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/lock_close"
+        android:layout_above="@id/mainCar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp" />
+
+    <ImageView
+        android:id="@+id/lock2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/lock_close"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="50dp" />
+
+    <ImageView
+        android:id="@+id/lock3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/lock_close"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:id="@+id/pressureLayout1"
+                android:layout_width="120dp"
+                android:layout_height="200dp"
+                android:visibility="gone"
+                android:foreground="@drawable/container_heat"
+                android:background="#2C1319"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pressure23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23.6psi"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_margin="6dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="56°C"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp"
+                    android:layout_below="@id/pressure23"
+                    android:textColor="#B9B9B9"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOW"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="6dp"
+                    android:layout_above="@id/pressureText1"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+                <TextView
+                    android:id="@+id/pressureText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRESSURE"
+                    android:textSize="11sp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#B9B9B9"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/pressureLayout2"
+                android:layout_width="120dp"
+                android:layout_height="200dp"
+                android:visibility="gone"
+                android:foreground="@drawable/container_cool"
+                android:background="#1A181B"
+                android:layout_marginStart="15dp"
+                android:orientation="vertical">
+
+
+
+                <TextView
+                    android:id="@+id/pressure35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="35.0psi"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_margin="6dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="41°C"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp"
+                    android:layout_below="@id/pressure35"
+                    android:textColor="#B9B9B9"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOW"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="6dp"
+                    android:layout_above="@id/pressureText2"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+                <TextView
+                    android:id="@+id/pressureText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRESSURE"
+                    android:textSize="11sp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#B9B9B9"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayout1"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:id="@+id/pressureLayout3"
+                android:layout_width="120dp"
+                android:layout_height="200dp"
+                android:foreground="@drawable/container_cool"
+                android:background="#1A181B"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pressure34.6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="34.6psi"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_margin="6dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="41°C"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp"
+                    android:layout_below="@id/pressure34.6"
+                    android:textColor="#B9B9B9"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOW"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="6dp"
+                    android:layout_above="@id/pressureText3"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+                <TextView
+                    android:id="@+id/pressureText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRESSURE"
+                    android:textSize="11sp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#B9B9B9"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/pressureLayout4"
+                android:layout_width="120dp"
+                android:layout_height="200dp"
+                android:visibility="gone"
+                android:foreground="@drawable/container_cool"
+                android:background="#1A181B"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:orientation="vertical">
+
+
+
+                <TextView
+                    android:id="@+id/pressure34.8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="34.8psi"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_margin="6dp"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="42°C"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp"
+                    android:layout_below="@id/pressure34.8"
+                    android:textColor="#B9B9B9"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOW"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="6dp"
+                    android:layout_above="@id/pressureText4"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+                <TextView
+                    android:id="@+id/pressureText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRESSURE"
+                    android:textSize="11sp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:layout_margin="4dp"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#B9B9B9"
+                    android:fontFamily="sans-serif-condensed"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/tire1"
+        android:layout_width="25dp"
+        android:layout_height="60dp"
+        android:src="@drawable/tire_img"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:layout_marginEnd="112dp"
+        android:layout_marginTop="300dp" />
+
+    <ImageView
+        android:id="@+id/tire2"
+        android:layout_width="25dp"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:src="@drawable/tire_img"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="300dp" />
+
+
+    <ImageView
+        android:id="@+id/tire3"
+        android:layout_width="25dp"
+        android:layout_height="60dp"
+        android:src="@drawable/tire_img"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:layout_marginEnd="112dp"
+        android:layout_marginTop="435dp" />
+
+    <ImageView
+        android:id="@+id/tire4"
+        android:layout_width="25dp"
+        android:layout_height="60dp"
+        android:src="@drawable/tire_img"
+        android:visibility="gone"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="435dp" />
+
+    <TextView
+        android:id="@+id/car_percentage_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHARGING \n 18 min remaining"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/mainCar"
+        android:visibility="gone"
+        android:textColor="@color/inactive_grey" />
+
+    <ImageView
+        android:id="@+id/lock4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/lock_close"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/mainCar"
+        android:layout_marginBottom="70dp" />
+
+
+    <ImageView
+        android:id="@+id/ceiling_back"
+        android:layout_width="65dp"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ceiling_car_background" />
+
+    <LinearLayout
+        android:id="@+id/tempSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="50dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/increaseTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_horizontal"
+            android:src="@android:drawable/arrow_up_float"
+            android:contentDescription="Increase Temperature"/>
+
+        <TextView
+            android:id="@+id/temperatureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="29°C"
+            android:textColor="#FFFFFF"
+            android:textSize="58sp"
+            android:layout_marginVertical="20dp"/>
+
+        <ImageButton
+            android:id="@+id/decreaseTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/arrow_down_float"
+            android:contentDescription="Decrease Temperature"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/mainCar"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/car"
+        />
+
+    <TextView
+        android:id="@+id/car_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="22 m/hr"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:layout_above="@id/bottomLayout"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/car_voltage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="232 v"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/bottomLayout"
+        android:layout_marginEnd="10dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/current_temperature_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CURRENT TEMPERATURE"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_marginStart="8dp"
+        android:visibility="gone"
+        android:layout_above="@id/body_temp" />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/body_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomLayout"
+        android:visibility="gone"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INSIDE"
+                android:textColor="#C4C4C4"
+                android:gravity="center"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20°C"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OUTSIDE"
+                android:textColor="@color/inactive_grey"
+                android:gravity="center"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="35°C"
+                android:textColor="@color/inactive_grey"
+                android:gravity="center"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/icon_lock"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:tint="@android:color/holo_blue_dark"
+            android:layout_margin="30dp"
+            android:src="@drawable/lock" />
+
+        <ImageView
+            android:id="@+id/icon_battery"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:tint="@android:color/darker_gray"
+            android:layout_margin="30dp"
+            android:src="@drawable/battery" />
+
+
+        <ImageView
+            android:id="@+id/icon_temperature"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:tint="@android:color/darker_gray"
+            android:layout_margin="30dp"
+            android:src="@drawable/temperature" />
+
+        <ImageView
+            android:id="@+id/icon_tire"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:tint="@android:color/darker_gray"
+            android:layout_margin="30dp"
+            android:src="@drawable/tire" />
+
+    </LinearLayout>
+
+</RelativeLayout>
