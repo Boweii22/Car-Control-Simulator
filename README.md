@@ -33,7 +33,7 @@ To run this project on your local machine:
 
 ## Development Process
 
-I originally came across this idea after watching a video on YouTube and decided to implement it as a practice project. The most rewarding part of the project was working through the complexities of using native Android tools to achieve polished animations without external packages.
+I originally came across this idea after watching a reel on instagram and decided to implement it as a practice project. The most rewarding part of the project was working through the complexities of using native Android tools to achieve polished animations without external packages.
 
 Some challenges I faced during development:
 - Optimizing the performance of animations for smoother transitions.
